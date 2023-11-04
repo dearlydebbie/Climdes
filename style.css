@@ -1,0 +1,646 @@
+/*************************** Import Font ***************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/*************************** Base Style ***************************/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Define global CSS variables for consistent styling */
+  --body-font-family: "Inter", sans-serif;
+  --body-font-color: #676767;
+  --light-color: #fdfefd;
+  --dark-color: #2e2e2e;
+  --dark-color-lighter: #4d4d4d;
+  --accent-color: #16443a;
+  --section-background-color: #d9e9e6;
+}
+
+html {
+  font-size: 65%; /* Adjust base font size to make responsive design easier */
+}
+
+body {
+  /* Define the base font style for the entire page */
+  font-size: 1.4rem;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  color: var(--body-font-color);
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block: 0.8rem;
+}
+
+.title {
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.text-content-group {
+  align-items: center;
+  text-align: center;
+}
+
+section:not(.hero) .text-content-group {
+  margin: 8rem 0 2rem;
+}
+
+/*************************** Navbar ***************************/
+/* Styles for the navigation bar and logo. */
+
+.logo {
+  margin-right: 10rem;
+}
+
+.logo-image {
+  min-width: 15.5rem;
+  max-width: 200px;
+}
+
+.menu-toggler {
+  width: 5.6rem;
+  height: 4rem;
+  line-height: 1;
+  position: relative;
+}
+
+.toggle-icon {
+  font-size: 2.6rem;
+  color: var(--body-font-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.25s;
+}
+
+.close-icon {
+  opacity: 0;
+}
+
+.open-icon {
+  color: var(--accent-color);
+  transition-delay: 0.25s;
+}
+
+.show-menu .close-icon {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+.show-menu .open-icon {
+  opacity: 0;
+  transition-delay: none;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu .list-item {
+  text-align: center;
+  margin: 1.2rem 1.6rem;
+}
+
+.nav-link {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.6rem;
+  padding: 0.8rem 0;
+  color: var(--body-font-color);
+  transition: color 0.25s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+
+.first-link {
+  color: var(--accent-color);
+}
+
+.search-box {
+  margin-top: 0.8rem;
+}
+
+.search-form {
+  position: relative;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 0;
+}
+
+.search-icon {
+  left: 2rem;
+}
+
+.search-input {
+  width: 20rem;
+  height: 4.8rem;
+  padding: 1.2rem 6rem 1.2rem 5.4rem;
+  background-color: var(--light-color);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.8rem;
+}
+
+.search-input::placeholder {
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--dark-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.search-input:focus::placeholder {
+  opacity: 0;
+}
+
+/*************************** Home ***************************/
+/* Styles for the home section. */
+
+.d-grid {
+  display: grid;
+}
+
+.home {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+  background: url('Images/background.jpg') no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-position: center;
+}
+
+.home .content {
+  flex: 1 1 40rem;
+  padding-top: 6.5rem;
+}
+
+.home .content h3 {
+  font-size: 5rem;
+  color: var(--light-color);
+  padding-left: 2rem;
+}
+
+.home .content p {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  padding: 1rem 2rem;
+}
+
+/*************************** About ***************************/
+/* Styles for the About section. */
+
+.about .image-content-group {
+  margin: 2rem 8rem;
+}
+
+.about .text-content-group {
+  margin: 4rem !important;
+}
+
+.about .section-tagline {
+  padding: 0 0 1rem;
+  color: #f9ba45;
+}
+
+/*************************** Intern ***************************/
+/* Styles for the Intern section. */
+
+.intern {
+  padding: 5rem 0;
+  background-color: var(--section-background-color);
+}
+
+.section-metadata {
+  text-align: center;
+}
+
+.section-tagline {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--accent-color);
+  line-height: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  line-height: 4.4rem;
+  margin-bottom: 2.2rem;
+}
+
+.card {
+  text-align: center;
+  margin: 3rem;
+  padding: 3rem 2.2rem 0;
+  background-color: var(--light-color);
+  border-radius: 1.2rem;
+}
+
+.card-body {
+  text-align: center;
+  margin: 3rem 0 1rem;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  line-height: 3.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.card-body p {
+  line-height: 2.5rem;
+}
+
+/*********************** Filter Button **********************/
+/* Styles for the filter buttons used to filter internships by category. */
+
+#filter-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  margin: 5px 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--body-font-color);
+  color: var(--light-color);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button.active,
+.filter-button:hover {
+  background-color: var(--accent-color);
+}
+
+/*************************** Other Buttons ***************************/
+/* Styles for various buttons used in the website. */
+
+.button {
+  display: inline-block;
+  text-align: center;
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  padding: 1.4rem 3rem;
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  transition: background-color 0.25s;
+}
+
+.home .button {
+  font-size: 2rem;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--light-color);
+  color: var(--accent-color);
+  transform: scale(1.1);
+  border-color: var(--accent-color);
+}
+
+section:not(.hero) .button {
+  margin: 5rem 0;
+}
+
+/*************************** Footer **************************/
+/* Styles for the website footer. */
+
+#footer {
+  text-align: center;
+  padding: 5rem 0 3rem;
+}
+
+.climdes-data {
+  margin-block: 2rem;
+}
+
+#footer .logo {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.climdes-description {
+  margin: 1.3rem 0 1rem;
+  line-height: 3rem;
+}
+
+.footer-group {
+  margin: 3rem 0 1rem;
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.footer-group .list {
+  margin: inherit;
+}
+
+.footer-group .link {
+  line-height: 4rem;
+}
+
+.horizontal-line {
+  margin-block: 3rem;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.copyright-information {
+  line-height: 2.4rem;
+}
+
+.legal-information a {
+  font-weight: 500;
+  margin: 0 1.2rem;
+  transition: color 0.5s;
+}
+
+.legal-information a:hover,
+.legal-information a:focus {
+  color: var(--accent-color);
+}
+
+/***************************** Media Queries ***********************/
+/* Media queries for responsive design based on different screen widths. */
+
+@media screen and (min-width: 800px) {
+  .body {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    padding: 8rem 0 12rem;
+  }
+
+  .container {
+    max-width: 72rem;
+  }
+
+  .button {
+    width: 18rem;
+    padding: 1.8rem 2rem;
+  }
+
+  .home .button {
+    font-size: inherit;
+  }
+
+  .text-content-group,
+  .section-metadata {
+    text-align: left;
+  }
+
+  .intern .section-metadata {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 3.2rem;
+  }
+
+  section:not(.home) .text-content-group {
+    margin: 10rem 0 2rem;
+  }
+
+  .about .text-content-group {
+    margin: 8rem !important;
+  }
+
+  .footer-bottom-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+  }
+
+  .home .content h3 {
+    font-size: 5rem;
+  }
+
+  .home .content p {
+    font-size: 2.5rem;
+  }
+
+  .card-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+    line-height: 3.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-body p {
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 96rem;
+  }
+
+  .home .content h3 {
+    font-size: 6.2rem;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+  }
+
+  .menu-toggler {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: row;
+    max-height: intital !important;
+    overflow: visible !important;
+    transition: none;
+  }
+
+  .menu > .list {
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .menu .list-item {
+    margin: 0 1.6rem;
+  }
+
+  .search-box {
+    margin-top: 0;
+  }
+
+  .about-container,
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.4rem;
+  }
+
+  .about .image-content-group {
+    order: 1;
+    margin: 8rem;
+  }
+
+  #footer {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+
+  .footer-top-data {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.4rem;
+  }
+
+  .climdes-data {
+    grid-column: span 2;
+  }
+
+  .legal-information {
+    margin-left: auto;
+  }
+
+  .home .content p {
+    font-size: 2.8rem;
+  }
+
+  .card-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 114rem;
+  }
+
+  .home .content h3 {
+    font-size: 7rem;
+  }
+
+  .home .content p {
+    font-size: 2.8rem;
+  }
+
+  .section:not(.intern) .section-title {
+    max-width: 90%;
+  }
+
+  .climdes-data {
+    max-width: 75%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 132rem;
+  }
+
+  .home .content h3 {
+    font-size: 9rem;
+  }
+
+  .home .content p {
+    font-size: 3rem;
+  }
+
+  section:not(.hero) .text-content-group {
+    margin: 20rem 0 2rem;
+  }
+
+  .section-tagline {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 4rem;
+  }
+
+  .intern .section-title {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

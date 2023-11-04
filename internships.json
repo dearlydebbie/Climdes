@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Web Development Intern",
+        "category": "Technical",
+        "description": "Join our team as a Web Development Intern and work on cutting-edge projects...",
+        "location": "New York, NY"
+    },
+    {
+        "id": 2,
+        "title": "Marketing Intern",
+        "category": "Non-Technical",
+        "description": "As a Marketing Intern, you'll be involved in creating and implementing marketing...",
+        "location": "San Francisco, CA"
+    },
+    {
+        "id": 3,
+        "title": "Data Science Intern",
+        "category": "Technical",
+        "description": "Become a Data Science Intern and analyze vast datasets to extract valuable insights...",
+        "location": "Chicago, IL"
+    },
+    {
+        "id": 4,
+        "title": "Graphic Design Intern",
+        "category": "Non-Technical",
+        "description": "Join our creative team as a Graphic Design Intern and craft stunning visual content...",
+        "location": "Los Angeles, CA"
+    },
+    {
+        "id": 5,
+        "title": "Software Engineering Intern",
+        "category": "Technical",
+        "description": "Be a part of our Software Engineering team and develop innovative software solutions...",
+        "location": "Boston, MA"
+    },
+    {
+        "id": 6,
+        "title": "Content Marketing Intern",
+        "category": "Non-Technical",
+        "description": "Content Marketing Interns create compelling content to engage our target audience...",
+        "location": "Austin, TX"
+    }
+]

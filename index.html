@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLIMDES Internship</title>
+    <link rel="stylesheet" href="style.css" /> <!-- Link to external stylesheet -->
+    <!-- Import external CSS libraries -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css"
+      integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    
+    <header class="header">
+      <nav class="navbar container">
+        <a href="index.html" class="logo">
+          <img src="Images/logo.jpeg" alt="" class="logo-image" />
+        </a>
+        <button type="button" class="menu-toggler">
+          <!-- Hamburger menu button -->
+          <i class="fa-solid toggle-icon fa-xmark close-icon"></i>
+          <i class="fa-solid toggle-icon fa-bars open-icon"></i>
+        </button>
+        <div class="menu">
+          <!-- Navigation menu -->
+          <ul class="list">
+            <li class="list-item">
+              <a href="#" class="nav-link first-link">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="#about" class="nav-link">About Us</a>
+            </li>
+            <li class="list-item">
+              <a href="#intern" class="nav-link">Internships</a>
+            </li>
+            <li class="list-item">
+              <a href="#intern" class="nav-link">Apply Now</a>
+            </li>
+          </ul>
+          <div class="search-box">
+            <!-- Search box -->
+            <form action="" class="search-form">
+              <span class="form-icon search-icon">
+                <!-- Search icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                    fill="rgba(83,91,92,1)"
+                  />
+                </svg>
+              </span>
+              <input type="text" class="search-input" placeholder="Search" />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <!-- Home section with a background image -->
+      <div class="content">
+        <h3>CLIMDES Internship</h3>
+        <p>In every seed lies the promise of an extraordinary harvest.</p>
+        <div class="button-home">
+          <a href="#intern" class="button button-normal">Apply Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <!-- About section -->
+      <div class="about-container d-grid">
+        <div class="image-content-group">
+          <img src="Images/1.png" alt="" />
+        </div>
+        <div class="text-content-group">
+          <div class="section-metadata">
+            <span class="section-tagline">World-Class Mentorship</span>
+            <h2 class="title section-title">
+              Explore, engage, and envision with CLIMDES.
+            </h2>
+            <p>
+              Whether you're a data science enthusiast, an aspiring agricultural
+              expert, or an innovator ready to take on real-world challenges, we
+              invite you to embark on this internship journey with us. Together,
+              we can cultivate a future where agriculture not only sustains us
+              but enriches our lives and our planet.
+            </p>
+          </div>
+          <a href="#" class="button">Apply Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="intern" class="intern">
+      <!-- Internship section -->
+      <div class="container">
+        <div class="section-metadata">
+          <span class="section-tagline">Intern With Us</span>
+          <h2 class="title section-title">
+            We invite you to embark on this internship journey with us!
+          </h2>
+          <div id="filter-buttons">
+            <!-- Filter buttons for internship categories -->
+            <button class="filter-button active" data-category="all">
+              All
+            </button>
+            <button class="filter-button" data-category="Technical">
+              Technical
+            </button>
+            <button class="filter-button" data-category="Non-Technical">
+              Non-Technical
+            </button>
+          </div>
+        </div>
+        <div class="card-group" id="opportunity-list">
+          <!-- Internship opportunities will be added here dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top-data d-grid">
+          <div class="climdes-data">
+            <a href="index.html" class="logo">
+              <img src="Images/logo.jpeg" alt="" class="logo-image" />
+            </a>
+            <p class="climdes-description">
+              Whether you're a data science enthusiast, an aspiring agricultural
+              expert, or an innovator ready to take on real-world challenges, we
+              invite you to embark on this internship journey with us.
+            </p>
+          </div>
+          <div class="footer-group">
+            <h6 class="footer-title title">CLIMDES</h6>
+            <ul class="list">
+              <li class="list-item">
+                <a href="#" class="nav-link">About Us</a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="nav-link">Blog</a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="nav-link">Past Interns</a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="nav-link">Project Showcase</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-group">
+            <h6 class="title footer-title">Get in Touch</h6>
+            <ul class="list">
+              <li class="list-item">
+                <a href="#" class="nav-link">Facebook</a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="nav-link">Youtube</a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="nav-link">LinkedIn</a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="nav-link">Instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="horizontal-line" />
+        <div class="footer-bottom-data">
+          <span class="copyright-info">
+            &copy;CLIMDES Internship 2023. All Rights Reserved.
+          </span>
+          <div class="legal-information">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
